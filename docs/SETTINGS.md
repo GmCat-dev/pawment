@@ -24,6 +24,7 @@ which saves this file. Start from `settings.example.json`.
 | `coins` | | The coin list: id, chain, unit, decimals, price sources, `enabled`, optional `discount` (with `from`/`until` dates and a `badge`) and `min_usd` |
 | `sites` | `{}` | Per-site name, notify/return URLs, and overrides (`featured`, per-coin `enabled`/`discount`) |
 | `email_alerts` | | `to` and `from` for owner alerts (sending needs a Resend key, set in the dashboard) |
+| `analytics_origin` | `""` | Optional: one outside script origin (e.g. a privacy-friendly page counter) allowed on the home page only (`public/home/index.html`, if you add one). Checkout and dashboard never load outside scripts |
 | `coming_soon` | `false` | Show a "coming soon" page; checkout and dashboard then need a preview code |
 
 ## Secrets (never in settings.json)

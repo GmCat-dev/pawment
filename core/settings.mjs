@@ -29,6 +29,7 @@ const DATE = /^\d{4}-\d{2}-\d{2}$/;
 /** Throws an Error with a plain-words message if something is wrong; returns the cleaned settings. */
 export function validate(raw) {
   const s = { ...DEFAULTS, ...raw, brand: { ...DEFAULTS.brand, ...(raw.brand || {}) }, email_alerts: { ...DEFAULTS.email_alerts, ...(raw.email_alerts || {}) } };
+  if (s.analytics_origin && !/^https:\/\/[a-z0-9.-]{3,100}$/.test(s.analytics_origin)) throw new Error('analytics_origin must be like "https://stats.example.com"');
   if (s.brand.theme && !/^[a-z0-9-]{1,30}$/.test(s.brand.theme)) throw new Error('brand.theme must be a theme file name like "my-shop"');
   if (!['mainnet', 'testnet'].includes(s.network)) throw new Error('network must be "mainnet" or "testnet"');
   for (const k of ['quote_minutes', 'grace_hours', 'order_hours', 'refund_days', 'gap_budget']) {

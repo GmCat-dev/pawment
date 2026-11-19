@@ -143,7 +143,7 @@ export async function createApp(opt = {}) {
 
   // ------------------------------------------------------------------ helpers
   const SEC_HEADERS = {
-    'x-content-type-options': 'nosniff', 'referrer-policy': 'no-referrer', 'x-frame-options': 'DENY',
+    'x-content-type-options': 'nosniff', 'referrer-policy': 'no-referrer', 'x-frame-options': 'DENY', 'x-robots-tag': 'noindex, nofollow',   // checkout links are private; the home page and legal pages opt back in
     'content-security-policy': "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
   };
   function send(res, status, body, type = 'application/json; charset=utf-8', extra = {}) {
@@ -234,11 +234,11 @@ export async function createApp(opt = {}) {
   const hitsTimer = setInterval(() => { const t = Date.now(); for (const [k, v] of hits) if (!v.some((x) => t - x < 3600_000)) hits.delete(k); }, 600_000).unref();
 
   const TYPES = { '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png', '.svg': 'image/svg+xml', '.ico': 'image/x-icon' };
-  function staticFile(res, rel) {
+  function staticFile(res, rel, extra = {}) {
     const file = normalize(join(ROOT, 'public', rel));
     if (!file.startsWith(join(ROOT, 'public')) || !existsSync(file) || !statSync(file).isFile()) return send(res, 404, { error: 'not_found' });
     const type = TYPES[extname(file)] || 'application/octet-stream';
-    res.writeHead(200, { 'content-type': type, 'cache-control': rel.endsWith('.html') ? 'no-store' : rel.endsWith('.woff2') ? 'public, max-age=2592000' : 'public, max-age=300', ...SEC_HEADERS });
+    res.writeHead(200, { 'content-type': type, 'cache-control': rel.endsWith('.html') ? 'no-store' : rel.endsWith('.woff2') ? 'public, max-age=2592000' : 'public, max-age=300', ...SEC_HEADERS, ...extra });
     res.end(readFileSync(file));
   }
   const csv = (rows) => {
@@ -256,7 +256,15 @@ export async function createApp(opt = {}) {
     let g;
 
     // ---- coming-soon teaser and preview code
-    if (req.method === 'GET' && (p === '/' || p === '/index.html')) return settings.coming_soon ? staticFile(res, 'soon/index.html') : send(res, 302, '', 'text/plain', { location: settings.brand?.support_url || '/admin/' });
+    if (req.method === 'GET' && (p === '/' || p === '/index.html')) {
+      if (settings.coming_soon) return staticFile(res, 'soon/index.html');
+      // an optional public home page (public/home/index.html); settings.analytics_origin may add one page-count script to it only
+      if (existsSync(join(ROOT, 'public', 'home', 'index.html'))) {
+        const a = settings.analytics_origin || '';
+        return staticFile(res, 'home/index.html', { 'x-robots-tag': 'all', ...(a ? { 'content-security-policy': SEC_HEADERS['content-security-policy'].replace("script-src 'self'", "script-src 'self' " + a).replace("connect-src 'self'", "connect-src 'self' " + a) } : {}) });
+      }
+      return send(res, 302, '', 'text/plain', { location: settings.brand?.support_url || '/admin/' });
+    }
     if (req.method === 'GET' && (g = m(/^\/soon\/([\w.-]+\.(?:css|js|png))$/))) return staticFile(res, 'soon/' + g[1]);
     if (p === '/api/preview' && req.method === 'GET') return send(res, 200, { coming_soon: Boolean(settings.coming_soon), unlocked: gateOk(req) });
     if (p === '/api/preview' && req.method === 'POST') {
@@ -272,7 +280,7 @@ export async function createApp(opt = {}) {
       if (req.method === 'GET' && !p.startsWith('/api/') && !p.startsWith('/admin/api/')) return send(res, 302, '', 'text/plain', { location: '/' });
       return send(res, 403, { error: 'coming_soon', message: 'Not open yet.' });
     }
-    if (req.method === 'GET' && (p === '/privacy' || p === '/terms')) return staticFile(res, 'legal' + p + '.html');
+    if (req.method === 'GET' && (p === '/privacy' || p === '/terms')) return staticFile(res, 'legal' + p + '.html', { 'x-robots-tag': 'all' });
     if (req.method === 'GET' && (g = m(/^\/o\/([a-z0-9_]+)$/))) return ID_RE.test(g[1]) ? staticFile(res, 'checkout.html') : send(res, 404, { error: 'not_found' });
     // theme (settings.brand.theme, a file in public/themes/): same files for the checkout (/assets/…) and the dashboard (/admin/…)
     if (req.method === 'GET' && (g = m(/^\/(?:assets|admin)\/theme\.css$/))) {
