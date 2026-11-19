@@ -1,0 +1,92 @@
+[
+ {
+  "name": "btc-zpub",
+  "xpub": "zpub6rFR7y4Q2AijBEqTUquhVz398htDFrtymD9xYYfG1m4wAcvPhXNfE3EfH1r1ADqtfSdVCToUG868RvUUkgDKf31mGDtKsAYz2oz2AGutZYs",
+  "addrs": [
+   "bc1qcr8te4kr609gcawutmrza0j4xv80jy8z306fyu",
+   "bc1qnjg0jd8228aq7egyzacy8cys3knf9xvrerkf9g",
+   "bc1qhxgzmkmwvrlwvlfn4qe57lx2qdfg8phycnsarn"
+  ]
+ },
+ {
+  "name": "btc-ypub",
+  "xpub": "ypub6Ww3ibxVfGzLrAH1PNcjyAWenMTbbAosGNB6VvmSEgytSER9azLDWCxoJwW7Ke7icmizBMXrzBx9979FfaHxHcrArf3zbeJJJUZPf663zsP",
+  "addrs": [
+   "37VucYSaXLCAsxYyAPfbSi9eh4iEcbShgf",
+   "3LtMnn87fqUeHBUG414p9CWwnoV6E2pNKS",
+   "3KHhcgwPgYF9hE77zaKy2G36dpkcNtvQ33"
+  ]
+ },
+ {
+  "name": "btc-xpub",
+  "xpub": "xpub6BosfCnifzxcFwrSzQiqu2DBVTshkCXacvNsWGYJVVhhawA7d4R5WSWGFNbi8Aw6ZRc1brxMyWMzG3DSSSSoekkudhUd9yLb6qx39T9nMdj",
+  "addrs": [
+   "1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA",
+   "1Ak8PffB2meyfYnbXZR9EGfLfFZVpzJvQP",
+   "1B1wDxGPrfqWSi4qvQvaPdunD6kon3CeDG"
+  ]
+ },
+ {
+  "name": "ltc-zpub",
+  "xpub": "zpub6rPo5mF47z5coVm5rvWv7fv181awb7Vckn5Cf3xQXBVKu18kuBHDhNi1Jrb4br6vVD3ZbrnXemEsWJoR18mZwkUdzwD8TQnHDUCGxqZ6swA",
+  "addrs": [
+   "ltc1qjmxnz78nmc8nq77wuxh25n2es7rzm5c2rkk4wh",
+   "ltc1qwlezpr3890hcp6vva9twqh27mr6edadreqvhnn",
+   "ltc1q6773gjywzqe0hpyapquenk7jsddpq9ezjkqle4"
+  ]
+ },
+ {
+  "name": "ltc-Ltub",
+  "xpub": "Ltub2YDQmP391UYeDYvLye9P1SuNJFkcRGN7SYHM8JMxaDnegcPTXHJ2BnYmvHnFnGPGKu2WMuCga6iZV3SDxDMGrRyMcrYEfSPhrpS1EPkC43E",
+  "addrs": [
+   "LUWPbpM43E2p7ZSh8cyTBEkvpHmr3cB8Ez",
+   "Ldatw8ZjgMGNUo5HMN6RgCrjmh7q494Si3",
+   "LVYs6bw81eLpkqGtsHWDNFbssZPPdNcL4G"
+  ]
+ },
+ {
+  "name": "ltc-Mtub",
+  "xpub": "Mtub2rz9F1pkisRsSZX8sa4Ajon9GhPP6JymLgpuHqbYdU5JKFLBF7Qy8b1tZ3dccj2fefrAxfrPdVkpCxuWn3g72UctH2bvJRkp6iFmp8aLeRZ",
+  "addrs": [
+   "M7wtsL7wSHDBJVMWWhtQfTMSYYkyooAAXM",
+   "M92zAbFXY2J7NJXdFpJTe3a5PrsyZQhKZK",
+   "M8Gqv6HYPQ8SYsyE95SSGd4q9VEkk6Wqzf"
+  ]
+ },
+ {
+  "name": "bch-xpub",
+  "xpub": "xpub6ByHsPNSQXTWZ7PLESMY2FufyYWtLXagSUpMQq7Un96SiThZH2iJB1X7pwviH1WtKVeDP6K8d6xxFzzoaFzF3s8BKCZx8oEDdDkNnp4owAZ",
+  "addrs": [
+   "bitcoincash:qqyx49mu0kkn9ftfj6hje6g2wfer34yfnq5tahq3q6",
+   "bitcoincash:qp8sfdhgjlq68hlzka9lcsxtcnvuvnd0xqxugfzzc5",
+   "bitcoincash:qqh67lr5sr9f9u7wm5e4ky6a8ajhfme3wup9zpz97n"
+  ]
+ },
+ {
+  "name": "grs-zpub",
+  "xpub": "zpub6qdhcNVVLJ2t8kLzGLzeaiJv7EahaRBsXmu1yVPyXHvMdFmS4d7JSi5aS6mc1oz5k6DZN781Ffn3GAs3r2FJnCPSw5nti63s3c9EDg2u7MS",
+  "addrs": [
+   "grs1qrm2uggqj846nljryvmuga56vtwfey0dtnc4z55",
+   "grs1qy2vlj0w9kp408mg74trj9s08azhzschw5ayp2g",
+   "grs1qw95eq0a2yne3kd5gglr32whk3kpla5l72xpe0s"
+  ]
+ },
+ {
+  "name": "grs-ypub",
+  "xpub": "ypub6X46SconPpL9QhXPnMGuPLB9jYai7nrHz7ki4zq3awHb462iPSG5eV19oBWv22RWt69npsi75XGcANsevtTWE8YFgqpygrGUPnEKp6vty5v",
+  "addrs": [
+   "3299Qf2x9BnzLaZu4HCLvm26RbBB3ZRf4u",
+   "37WFkjwMYBkJrpnSA92iHjtFcXneDcQFTW",
+   "3PKUUAiQU5z942K8nNjyn5dhV3oK1ATBsC"
+  ]
+ },
+ {
+  "name": "grs-xpub",
+  "xpub": "xpub6DFSGe2bonksyNuiTXpJ7iuFZZUAdKvsdxSdp1zREazBVTBDcWn94f7eNg5MN148WHsaUfG3Mmmqa6nBi1VCde1t7wM3NA3993CcjChk1g5",
+  "addrs": [
+   "Fpzstx4fKWhqZYbVVmuncuhbEmgecqPTgg",
+   "FjPhVFfEgaXq3ucU7gQj5Gz5oeCzbeXzHm",
+   "FaRrhEVTzffRYyzqCJ1uSTdpXQqeqqgK9T"
+  ]
+ }
+]

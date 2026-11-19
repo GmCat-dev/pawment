@@ -1,0 +1,328 @@
+{
+  "name": "Pawment",
+  "public_url": "https://pay.example.com",
+  "network": "mainnet",
+  "brand": {
+    "logo": "assets/pawment-logo.png",
+    "accent": "#6b4fd8",
+    "support_url": "",
+    "terms_url": "",
+    "privacy_url": ""
+  },
+  "quote_minutes": 30,
+  "grace_hours": 24,
+  "order_hours": 72,
+  "tolerance_percent": 1.5,
+  "refund_days": 7,
+  "gap_budget": 15,
+  "featured": "ADA",
+  "coins": [
+    {
+      "id": "ADA",
+      "chain": "cardano",
+      "unit": "lovelace",
+      "decimals": 6,
+      "name": "Cardano",
+      "symbol": "ADA",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:cardano",
+          "kraken:ADAUSD"
+        ]
+      }
+    },
+    {
+      "id": "BTC",
+      "chain": "btc",
+      "unit": "sat",
+      "decimals": 8,
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:bitcoin",
+          "kraken:XBTUSD"
+        ]
+      },
+      "min_usd": 2
+    },
+    {
+      "id": "LTC",
+      "chain": "ltc",
+      "unit": "sat",
+      "decimals": 8,
+      "name": "Litecoin",
+      "symbol": "LTC",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:litecoin",
+          "kraken:LTCUSD"
+        ]
+      }
+    },
+    {
+      "id": "BCH",
+      "chain": "bch",
+      "unit": "sat",
+      "decimals": 8,
+      "name": "Bitcoin Cash",
+      "symbol": "BCH",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:bitcoin-cash",
+          "kraken:BCHUSD"
+        ]
+      }
+    },
+    {
+      "id": "GRS",
+      "chain": "grs",
+      "unit": "sat",
+      "decimals": 8,
+      "name": "Groestlcoin",
+      "symbol": "GRS",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:groestlcoin"
+        ]
+      }
+    },
+    {
+      "id": "ETH",
+      "chain": "eth",
+      "unit": "wei",
+      "decimals": 18,
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:ethereum",
+          "kraken:ETHUSD"
+        ]
+      },
+      "min_usd": 2
+    },
+    {
+      "id": "USDTeth",
+      "chain": "eth",
+      "unit": "erc20:0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "decimals": 6,
+      "name": "USDT on Ethereum",
+      "symbol": "USDT",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      },
+      "min_usd": 2
+    },
+    {
+      "id": "USDCeth",
+      "chain": "eth",
+      "unit": "erc20:0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "decimals": 6,
+      "name": "USDC on Ethereum",
+      "symbol": "USDC",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      },
+      "min_usd": 2
+    },
+    {
+      "id": "BNB",
+      "chain": "bsc",
+      "unit": "wei",
+      "decimals": 18,
+      "name": "BNB (BNB Smart Chain)",
+      "symbol": "BNB",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:binancecoin",
+          "kraken:BNBUSD"
+        ]
+      }
+    },
+    {
+      "id": "USDTbsc",
+      "chain": "bsc",
+      "unit": "erc20:0x55d398326f99059ff775485246999027b3197955",
+      "decimals": 18,
+      "name": "USDT on BNB Smart Chain",
+      "symbol": "USDT",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "USDCbsc",
+      "chain": "bsc",
+      "unit": "erc20:0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "decimals": 18,
+      "name": "USDC on BNB Smart Chain",
+      "symbol": "USDC",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "POL",
+      "chain": "polygon",
+      "unit": "wei",
+      "decimals": 18,
+      "name": "Polygon",
+      "symbol": "POL",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:polygon-ecosystem-token",
+          "kraken:POLUSD"
+        ]
+      }
+    },
+    {
+      "id": "USDTpol",
+      "chain": "polygon",
+      "unit": "erc20:0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+      "decimals": 6,
+      "name": "USDT on Polygon",
+      "symbol": "USDT",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "USDCpol",
+      "chain": "polygon",
+      "unit": "erc20:0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "decimals": 6,
+      "name": "USDC on Polygon",
+      "symbol": "USDC",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "TRX",
+      "chain": "trx",
+      "unit": "sun",
+      "decimals": 6,
+      "name": "TRON",
+      "symbol": "TRX",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:tron",
+          "kraken:TRXUSD"
+        ]
+      }
+    },
+    {
+      "id": "USDTtrx",
+      "chain": "trx",
+      "unit": "trc20:TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+      "decimals": 6,
+      "name": "USDT on TRON",
+      "symbol": "USDT",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      },
+      "min_usd": 3
+    },
+    {
+      "id": "XMR",
+      "chain": "xmr",
+      "unit": "piconero",
+      "decimals": 12,
+      "name": "Monero",
+      "symbol": "XMR",
+      "kind": "native",
+      "price": {
+        "feeds": [
+          "coingecko:monero",
+          "kraken:XMRUSD"
+        ]
+      }
+    },
+    {
+      "id": "USDCx",
+      "chain": "cardano",
+      "unit": "1f3aec8bfe7ea4fe14c5f121e2a92e301afe414147860d557cac7e345553444378",
+      "decimals": 6,
+      "name": "USDCx (Circle)",
+      "symbol": "USDCx",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "USDM",
+      "chain": "cardano",
+      "unit": "c48cbb3d5e57ed56e276bc45f99ab39abe94e6cd7ac39fb402da47ad0014df105553444d",
+      "decimals": 6,
+      "name": "USDM (Moneta)",
+      "symbol": "USDM",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "USDA",
+      "chain": "cardano",
+      "unit": "fe7c786ab321f41c654ef6c1af7b3250a613c24e4213e0425a7ae45655534441",
+      "decimals": 6,
+      "name": "USDA (Anzens)",
+      "symbol": "USDA",
+      "kind": "stable",
+      "price": {
+        "fixed": 1
+      }
+    },
+    {
+      "id": "DJED",
+      "chain": "cardano",
+      "unit": "8db269c3ec630e06ae29f74bc39edd1f87c819f1056206e879a1cd61446a65644d6963726f555344",
+      "decimals": 6,
+      "name": "DJED (COTI)",
+      "symbol": "DJED",
+      "kind": "stable",
+      "price": {
+        "feeds": [
+          "coingecko:djed"
+        ]
+      }
+    },
+    {
+      "id": "iUSD",
+      "chain": "cardano",
+      "unit": "f66d78b4a3cb3d37afa0ec36461e51ecbde00f26c8f0a68f94b6988069555344",
+      "decimals": 6,
+      "name": "iUSD (Indigo)",
+      "symbol": "iUSD",
+      "kind": "stable",
+      "price": {
+        "feeds": [
+          "coingecko:iusd"
+        ]
+      }
+    }
+  ],
+  "sites": {},
+  "email_alerts": {
+    "to": "",
+    "from": ""
+  }
+}

@@ -1,0 +1,23 @@
+[Unit]
+Description=Pawment (watch-only crypto checkout)
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /opt/pawment/server.mjs
+Environment=PAY_DATA=/var/lib/pawment
+Environment=PAY_SETTINGS=/var/lib/pawment/settings.json
+Environment=PAY_PORT=4201
+Environment=NODE_ENV=production
+User=www-data
+Group=www-data
+Restart=on-failure
+RestartSec=5
+MemoryMax=200M
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/pawment
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,31 @@
+{
+  "note": "Demo only: test-network public keys from thrown-away random keys. Never send real coins here.",
+  "cardano": {
+    "account_key": "xpub1ff052vx264g6kykty3lf4crr5hwr37x04ht8dfw9y46547v4juhvuy8q4gmsaqxxxzxymz25wvqwx3v43ywl82p6rme3mrljn6qtuts2fdskp"
+  },
+  "btc": {
+    "account_key": "vpub5ZdMhFx5cpPSELoCdi1dwWSibGZ1o9q2w8udoZYZ3cvT3v89GLbQu1FWQz63qwmfCzbfw12xjKXtrFsTtXxgoAdpmTrWduqxEjFL6y1eMSW"
+  },
+  "ltc": {
+    "account_key": "vpub5ZTY2sNkjEArPUdx7QZKGLovhWbYE1JRnsm7S2LHNMVBJsrf48UydkxZjx1z9PVCikro6mtdwT3Kkpjf9DwwWd91U5nXZRJJU67uWqjCVKa"
+  },
+  "bch": {
+    "account_key": "tpubDCE4cAB64DCM6SAVqp9AVUWn8UR43MoDDsMVc8eB7LHamhcpqfSvexErYgYhYngFvf6x7TyKo1UJ47pX551qBm4ULtDh8s97Gd8X5pHJwRJ"
+  },
+  "eth": {
+    "address": "0xe01F7E14bbb007253CDAe56dd90E019c8a460180"
+  },
+  "bsc": {
+    "address": "0xC9FFC3d7D649319B63e32F0C7F6CE5A77a16067b"
+  },
+  "polygon": {
+    "address": "0xA53BE792EEc9025D2E008861E4dAbD65E59fE6bd"
+  },
+  "trx": {
+    "address": "TReZyGk1o4fDYhWCbCk3gg8RaZK2U6ojWL"
+  },
+  "xmr": {
+    "address": "54dNkd5JK4u5VqCmRJmgFciXieQXLdb9Ebrhsh29oBbc3oNbyBoCY3z2ekvvNbRiywgXRdWU8dmtAXydfbgNSMWGLX4qcNX",
+    "view_key": "766c9b0686f6972c312bfe51eca56c6c12f66e2c4975ce21db4ed52bdffc9502"
+  }
+}

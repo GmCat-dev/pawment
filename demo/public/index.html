@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pawment: self-hosted crypto checkout (live demo)</title>
+<meta name="description" content="Pawment is a free, open-source, self-hosted crypto checkout. Watch-only: no keys that can spend on your server. Cardano and its tokens, Bitcoin, Litecoin, Bitcoin Cash, Ethereum, BNB, Polygon, TRON, Monero, USDT and USDC. Try the live demo.">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="/intro.css">
+<meta property="og:title" content="Pawment: self-hosted crypto checkout">
+<meta property="og:description" content="Free, open-source, watch-only crypto checkout you run on your own server. Try the live demo with pretend money.">
+<meta property="og:url" content="https://pawment.gmcat.io/">
+<link rel="canonical" href="https://pawment.gmcat.io/">
+</head>
+<body>
+<header class="top wrap">
+  <a class="brand" href="/"><img class="mark day" src="/logo.png" alt="" width="40" height="40"><img class="mark night" src="/logo-night.png" alt="" width="40" height="40"><span>Pawment</span><span class="by">by <img class="day" src="/gmcat-wordmark.png" alt="GmCat" width="97" height="20"><img class="night" src="/gmcat-wordmark-white.png" alt="GmCat" width="97" height="20"></span></a>
+  <nav><a href="https://github.com/GmCat-dev/pawment">GitHub</a></nav>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <img class="hero-cat" src="/gmcat.png" alt="GmCat, the pixel cat, holding a mug" width="202" height="249">
+    <p class="beta">Beta software, still under development</p>
+    <h1>Take crypto payments on your own server</h1>
+    <p class="lead">Pawment is a free, open-source checkout you run yourself. It only <strong>watches</strong> your wallets: no keys that can spend ever touch the server, and payments go straight to you.</p>
+    <div class="actions">
+      <a class="btn" href="/start">Try the live demo</a>
+      <a class="btn-soft" href="https://github.com/GmCat-dev/pawment">Source code</a>
+      <a class="btn-soft" href="https://github.com/GmCat-dev/pawment/blob/main/docs/INSTALL.md">Install guide</a>
+    </div>
+    <p class="muted small">The demo is a private sandbox just for you, on pretend money. It clears itself after an hour of no use.</p>
+  </section>
+
+  <section class="wrap grid3">
+    <div class="card"><h2>Watch-only</h2><p>Paste a public key or address. Pawment hands out fresh addresses from it, sees payments arrive, and never holds anything that can move your coins.</p></div>
+    <div class="card"><h2>Light</h2><p>One small Node program, no blockchain node, no database server. It reads public blockchain services and checks each payment with a second one.</p></div>
+    <div class="card"><h2>Fair to buyers</h2><p>Wallet "Pay" buttons and QR codes, small differences forgiven, underpaid orders stay open for the rest, overpayments listed for refund, late payments get a grace period.</p></div>
+  </section>
+
+  <section class="wrap">
+    <h2>Coins</h2>
+    <ul class="coins">
+      <li><strong>Cardano</strong> ADA, any Cardano token, USDCx, USDM, USDA, DJED, iUSD</li>
+      <li><strong>Bitcoin family</strong> BTC, LTC, BCH, Groestlcoin</li>
+      <li><strong>Ethereum, BNB Smart Chain, Polygon</strong> ETH, BNB, POL, USDT, USDC</li>
+      <li><strong>TRON</strong> TRX, USDT</li>
+      <li><strong>Monero</strong> XMR (fresh subaddress per order, view key only)</li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Your site asks for an order</strong> with one API call (amount in dollars) and sends the buyer to the checkout link.</li>
+      <li><strong>The buyer picks a coin and pays</strong> from their wallet. The price is held for 30 minutes.</li>
+      <li><strong>Pawment sees it on the blockchain</strong>, waits for enough confirmations, and tells your site with a signed notice.</li>
+    </ol>
+    <p>You get a dashboard with orders, payments to check by hand, refunds (you send them yourself), per-coin discounts and a ledger export for taxes.</p>
+  </section>
+
+  <section class="wrap card note">
+    <h2>Licence</h2>
+    <p>Free under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">GNU AGPL-3.0</a>. If you'd rather not share your changes, a commercial licence is available (see the repository). Beta: test with small amounts first.</p>
+  </section>
+</main>
+
+<footer class="wrap muted small">
+  <p>Pawment is made by <a href="https://gmcat.io">GmCat</a>. The demo uses test networks and pretend money; nothing you do here is real.</p>
+</footer>
+</body>
+</html>

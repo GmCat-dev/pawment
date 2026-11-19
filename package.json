@@ -1,0 +1,10 @@
+{
+  "name": "pawment",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Watch-only crypto checkout (Pawment by GmCat). Payments go straight to the owner's wallet.",
+  "type": "module",
+  "scripts": { "start": "node server.mjs", "test": "node --test test/*.test.mjs" },
+  "optionalDependencies": { "@emurgo/cardano-serialization-lib-nodejs": "17.0.0" },
+  "engines": { "node": ">=22.13" }
+}
